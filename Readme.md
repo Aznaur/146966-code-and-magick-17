@@ -1,7 +1,7 @@
 # Учебный проект «Код и Магия» [![Build status][travis-image]][travis-url]
 
 * Студент: [Азнаур Хапчаев](https://up.htmlacademy.ru/javascript/17/user/146966).
-* Наставник: `Неизвестно`.
+* Наставник: [Артем Черкасов](https://htmlacademy.ru/profile/id530727).
 
 ---
 
