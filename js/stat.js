@@ -35,7 +35,7 @@ window.renderStatistics = function (ctx, players, times) {
 
   var maxTime = getMaxElement(times);
 
-  for(var i = 0; i < players.length; i++) {
+  for (var i = 0; i < players.length; i++) {
     if (players[i] === 'Вы') {
       ctx.fillStyle = '#000';
       ctx.fillText(players[i], CLOUD_X + BAR_WIDTH + TEXT_WIDTH * i, 270);
