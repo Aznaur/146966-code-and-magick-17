@@ -30,22 +30,22 @@ var similarWizardTemplate = document.querySelector('#similar-wizard-template')
 
 var heroes = [
   {
-    name: names[randomInteger(0,7)] + " " + lastNames[randomInteger(0,7)],
+    name: names[randomInteger(0, names.length - 1)] + ' ' + lastNames[randomInteger(0, names.length - 1)],
     coatColor: coatColors[randomInteger(0, coatColors.length - 1)],
     eyesColor: eyeColors[randomInteger(0, eyeColors.length - 1)]
   },
   {
-    name: names[randomInteger(0,7)] + " " + lastNames[randomInteger(0,7)],
+    name: names[randomInteger(0, names.length - 1)] + ' ' + lastNames[randomInteger(0, names.length - 1)],
     coatColor: coatColors[randomInteger(0, coatColors.length - 1)],
     eyesColor: eyeColors[randomInteger(0, eyeColors.length - 1)]
   },
   {
-    name: names[randomInteger(0,7)] + " " + lastNames[randomInteger(0,7)],
+    name: names[randomInteger(0, names.length - 1)] + ' ' + lastNames[randomInteger(0, names.length - 1)],
     coatColor: coatColors[randomInteger(0, coatColors.length - 1)],
     eyesColor: eyeColors[randomInteger(0, eyeColors.length - 1)]
   },
   {
-    name: names[randomInteger(0,7)] + " " + lastNames[randomInteger(0,7)],
+    name: names[randomInteger(0, names.length - 1)] + ' ' + lastNames[randomInteger(0, names.length - 1)],
     coatColor: coatColors[randomInteger(0, coatColors.length - 1)],
     eyesColor: eyeColors[randomInteger(0, eyeColors.length - 1)]
   }
@@ -62,7 +62,7 @@ var renderWizard = function (wizard) {
 
 var fragment = document.createDocumentFragment();
 for (var i = 0; i < heroes.length; i++) {
-  fragment.appendChild(renderWizard(heroes[i])); 
+  fragment.appendChild(renderWizard(heroes[i]));
 }
 similarListElement.appendChild(fragment);
 
