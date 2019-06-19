@@ -28,29 +28,15 @@ var similarWizardTemplate = document.querySelector('#similar-wizard-template')
     .content
     .querySelector('.setup-similar-item');
 
-var heroes = [
-  {
-    name: names[randomInteger(0, names.length - 1)] + ' ' + lastNames[randomInteger(0, names.length - 1)],
-    coatColor: coatColors[randomInteger(0, coatColors.length - 1)],
-    eyesColor: eyeColors[randomInteger(0, eyeColors.length - 1)]
-  },
-  {
-    name: names[randomInteger(0, names.length - 1)] + ' ' + lastNames[randomInteger(0, names.length - 1)],
-    coatColor: coatColors[randomInteger(0, coatColors.length - 1)],
-    eyesColor: eyeColors[randomInteger(0, eyeColors.length - 1)]
-  },
-  {
-    name: names[randomInteger(0, names.length - 1)] + ' ' + lastNames[randomInteger(0, names.length - 1)],
-    coatColor: coatColors[randomInteger(0, coatColors.length - 1)],
-    eyesColor: eyeColors[randomInteger(0, eyeColors.length - 1)]
-  },
-  {
-    name: names[randomInteger(0, names.length - 1)] + ' ' + lastNames[randomInteger(0, names.length - 1)],
-    coatColor: coatColors[randomInteger(0, coatColors.length - 1)],
-    eyesColor: eyeColors[randomInteger(0, eyeColors.length - 1)]
-  }
-];
+var heroes = [];
 
+for (var i = 0; i < 4; i++) {
+  heroes.push({
+    name: names[randomInteger(0, names.length - 1)] + ' ' + lastNames[randomInteger(0, names.length - 1)],
+    coatColor: coatColors[randomInteger(0, coatColors.length - 1)],
+    eyesColor: eyeColors[randomInteger(0, eyeColors.length - 1)]
+  });
+}
 
 var renderWizard = function (wizard) {
   var wizardElement = similarWizardTemplate.cloneNode(true);
@@ -69,7 +55,7 @@ similarListElement.appendChild(fragment);
 userDialog.querySelector('.setup-similar').classList.remove('hidden');
 
 function randomInteger(min, max) {
-  var rand = min - 0.5 + Math.random() * (max - min + 1);
+  var rand = Math.floor(min + Math.random() * (max - min + 1));
   rand = Math.round(rand);
   return rand;
 }
