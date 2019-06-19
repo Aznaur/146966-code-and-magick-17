@@ -47,8 +47,8 @@ var renderWizard = function (wizard) {
 };
 
 var fragment = document.createDocumentFragment();
-for (var i = 0; i < heroes.length; i++) {
-  fragment.appendChild(renderWizard(heroes[i]));
+for (var j = 0; j < heroes.length; j++) {
+  fragment.appendChild(renderWizard(heroes[j]));
 }
 similarListElement.appendChild(fragment);
 
