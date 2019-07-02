@@ -46,6 +46,8 @@ var openDialog = function () {
 var closeDialog = function () {
   userDialog.classList.add('hidden');
   document.removeEventListener('keydown', onDialogEscPress);
+  userDialog.style.top = '';
+  userDialog.style.left = '';
 };
 
 userDialogOpen.addEventListener('click', function () {
@@ -129,3 +131,5 @@ function randomInteger(min, max) {
   rand = Math.round(rand);
   return rand;
 }
+
+
